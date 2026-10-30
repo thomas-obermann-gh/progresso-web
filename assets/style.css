@@ -77,7 +77,10 @@ a:hover { text-decoration-thickness: 2px; }
   display: inline-flex; align-items: center; gap: 0.7rem;
   color: var(--ink); text-decoration: none; font-weight: 600; letter-spacing: -0.005em;
 }
-.brand svg { width: 2rem; height: 2rem; flex: none; }
+.brand svg { width: 2.25rem; height: 2.25rem; flex: none; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+.brand-text strong { font-size: 1.15rem; font-weight: 600; }
+.brand-text span { font-size: 0.85rem; font-weight: 500; color: var(--muted); }
 .brand .mark-bg { fill: var(--ink); }
 .brand .mark-bar { fill: var(--bg); }
 .brand .mark-signal { fill: var(--signal); }
