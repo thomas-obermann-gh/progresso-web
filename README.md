@@ -1,34 +1,32 @@
 # Website Progresso Consulting Germany GmbH
 
-Statische Website (HTML/CSS, kein JavaScript, keine Cookies, keine externen Abrufe) für Cloudflare Pages.
+Statische Website (HTML/CSS, kein JavaScript, keine Cookies, keine externen Abrufe). Sie läuft als Cloudflare Worker, der nur die Dateien aus `public/` ausliefert.
 
 ## Inhalt
 
 | Datei | Zweck |
 |---|---|
-| `index.html` | Startseite (Englisch, Inhalte wie bisher) |
-| `impressum.html` | Impressum, erreichbar unter `/impressum` |
-| `datenschutz.html` | Datenschutzerklärung, erreichbar unter `/datenschutz` |
-| `404.html` | Seite für ungültige Adressen |
-| `assets/style.css` | Gestaltung, inkl. Dunkelmodus |
-| `assets/fonts/` | Schrift IBM Plex Sans, lokal eingebunden (Lizenz: SIL OFL) |
-| `_redirects` | Leitet die alte IONOS-Adresse `/privacy18741a6b` auf `/datenschutz` um |
-| `_headers` | Sicherheits-Header |
-| `robots.txt`, `sitemap.xml` | Für Suchmaschinen |
+| `public/index.html` | Startseite (Englisch, Inhalte wie bisher) |
+| `public/impressum.html` | Impressum, erreichbar unter `/impressum` |
+| `public/datenschutz.html` | Datenschutzerklärung, erreichbar unter `/datenschutz` |
+| `public/404.html` | Seite für ungültige Adressen |
+| `public/assets/style.css` | Gestaltung, inkl. Dunkelmodus |
+| `public/assets/fonts/` | Schrift IBM Plex Sans, lokal eingebunden (Lizenz: SIL OFL) |
+| `public/_redirects` | Leitet die alte IONOS-Adresse `/privacy18741a6b` auf `/datenschutz` um |
+| `public/_headers` | Sicherheits-Header |
+| `public/robots.txt`, `public/sitemap.xml` | Für Suchmaschinen |
+| `wrangler.jsonc` | Cloudflare-Einstellungen (Name des Workers, Ordner `public`, 404-Seite) |
 
 ## Veröffentlichen
 
-1. **GitHub:** Neues Repository anlegen, z. B. `progresso-website`, Sichtbarkeit *Private*.
-   Über *Add file → Upload files* den **Inhalt** dieses Ordners hochladen (nicht den Ordner selbst), inklusive `_headers`, `_redirects` und dem Ordner `assets`. Mit *Commit changes* abschließen.
-2. **Cloudflare:** *Workers & Pages → Erstellen → Pages → Mit Git verbinden*.
-   GitHub autorisieren (Zugriff nur auf dieses Repository genügt) und das Repository wählen.
-   Build-Einstellungen: Framework *Keins*, Build-Befehl leer, Ausgabeverzeichnis leer bzw. `/`.
-3. **Testen** unter der angezeigten Adresse `….pages.dev`.
-4. **Domain verbinden:** Im Pages-Projekt unter *Benutzerdefinierte Domains* `www.progresso-consulting.com` und `progresso-consulting.com` hinzufügen. Voraussetzung: Die Domain läuft bereits über die Cloudflare-Nameserver.
+Cloudflare baut und veröffentlicht automatisch bei jeder Änderung auf `main` (Workers Builds). Den Status zeigt GitHub beim jeweiligen Commit.
+
+- **Testadresse:** im Cloudflare-Dashboard unter *Workers & Pages → progresso-web*, Endung `….workers.dev`
+- **Eigene Domain:** im Worker unter *Einstellungen → Domains & Routen* `www.progresso-consulting.com` und `progresso-consulting.com` hinzufügen. Voraussetzung: Die Domain läuft bereits über die Cloudflare-Nameserver.
 
 ## Ändern
 
-Datei in GitHub bearbeiten und speichern (*Commit*). Cloudflare veröffentlicht die Änderung automatisch nach etwa einer Minute.
+Datei in GitHub bearbeiten und speichern (*Commit*). Cloudflare veröffentlicht die Änderung nach etwa einer Minute.
 
 ## Vor dem Livegang prüfen
 
