@@ -2,6 +2,7 @@
   // Cloudflare Worker, der nur die statischen Dateien aus /public ausliefert
   "name": "progresso-web",
   "compatibility_date": "2026-06-01",
+  "previews": {},
   "assets": {
     "directory": "./public",
     "html_handling": "auto-trailing-slash",
