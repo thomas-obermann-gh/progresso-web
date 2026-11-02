@@ -6,10 +6,14 @@
   <title>Progresso Consulting Germany GmbH – SAP Planning &amp; Manufacturing</title>
   <meta name="description" content="SAP expertise in IBP, S/4HANA, SAP PP, PP-PI, ePP/DS and PP/DS, CPI-DS and APO – over 20 years of hands-on experience in planning and manufacturing.">
   <link rel="canonical" href="https://www.progresso-consulting.com/">
+  <link rel="alternate" hreflang="en" href="https://www.progresso-consulting.com/">
+  <link rel="alternate" hreflang="de" href="https://www.progresso-consulting.com/de/">
+  <link rel="alternate" hreflang="x-default" href="https://www.progresso-consulting.com/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Progresso Consulting Germany GmbH">
-  <meta property="og:description" content="SAP expertise in IBP, S/4HANA, SAP PP, PP/DS and APO.">
+  <meta property="og:description" content="SAP expertise in IBP, S/4HANA, SAP PP, PP-PI, ePP/DS and PP/DS, CPI-DS and APO – over 20 years of hands-on experience in planning and manufacturing.">
   <meta property="og:url" content="https://www.progresso-consulting.com/">
+  <meta property="og:locale" content="en_GB">
   <meta name="theme-color" content="#fafbfb" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0f171e" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -31,14 +35,17 @@
         </svg>
         <span class="brand-text"><strong>PCG</strong><span>Progresso Consulting Germany GmbH</span></span>
       </a>
-      <nav class="site-nav" aria-label="Main">
-        <ul>
-          <li><a href="/" aria-current="page">Home</a></li>
-          <li><a href="/impressum">Impressum</a></li>
-          <li><a href="/datenschutz">Datenschutz</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="site-tools">
+        <nav class="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="/" aria-current="page">Home</a></li>
+            <li><a href="/legal-notice">Legal notice</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <ul class="lang" aria-label="Language"><li><a href="/" hreflang="en" lang="en" aria-label="English" aria-current="true">EN</a></li><li><a href="/de/" hreflang="de" lang="de" aria-label="Deutsch">DE</a></li></ul>
+      </div>
     </div>
   </header>
 
@@ -48,31 +55,24 @@
         <h1>Experts in SAP Planning &amp; Manufacturing</h1>
         <p class="lead">Two experienced consultants with more than 20 years of process and professional experience.</p>
         <ul class="crew" aria-label="Our consultants">
+          <!-- Pedro: nach seinem Ausstieg diesen Block und den Satz oben anpassen, siehe README -->
           <li class="crew-row">
             <div class="crew-head">
               <img src="/assets/img/pedro-averwald.jpg" alt="Portrait of Pedro Averwald" width="176" height="176" decoding="async">
               <div>
                 <h2>Pedro Averwald</h2>
-                <p>End-to-end SAP IBP and its integration with ECC and S/4HANA. SAP IBP and SAP APO certified.</p>
+                <p>End-to-end SAP IBP with a focus on Response and Supply, integrated with ECC and S/4HANA. SAP IBP and SAP APO certified.</p>
               </div>
             </div>
             <ul class="focus" aria-label="Focus areas of Pedro Averwald">
-              <li class="area core">
+              <li class="area">
                 <span>SAP IBP</span>
                 <ul>
-                  <li class="key">Response and Supply</li>
+                  <li>Response and Supply</li>
                   <li>S&amp;OP</li>
                   <li>Demand</li>
                   <li>Order-based planning</li>
                   <li>Control Tower</li>
-                </ul>
-              </li>
-              <li class="area">
-                <span>SAP integration</span>
-                <ul>
-                  <li>CPI-DS</li>
-                  <li>Real-time integration</li>
-                  <li>Cloud Integration</li>
                 </ul>
               </li>
               <li class="area">
@@ -85,9 +85,18 @@
                   <li>CIF</li>
                 </ul>
               </li>
-              <li>ABAP programming</li>
+              <li class="area">
+                <span>Integration and development</span>
+                <ul>
+                  <li>CPI-DS</li>
+                  <li>Real-time integration</li>
+                  <li>Cloud Integration</li>
+                  <li>ABAP programming</li>
+                </ul>
+              </li>
             </ul>
           </li>
+          <!-- Thomas -->
           <li class="crew-row">
             <div class="crew-head">
               <img src="/assets/img/thomas-obermann.jpg" alt="Portrait of Thomas Obermann" width="176" height="176" decoding="async">
@@ -97,14 +106,14 @@
               </div>
             </div>
             <ul class="focus" aria-label="Focus areas of Thomas Obermann">
-              <li class="area core">
+              <li class="area">
                 <span>SAP PP and PP-PI</span>
                 <ul class="notes">
                   <li>Discrete manufacturing<small>Automotive, aerospace, machinery, high tech</small><small>Variant configuration, serialization, Kanban, rework</small></li>
                   <li>Process manufacturing<small>Chemicals, pharma, food and beverages</small><small>Batch management, shelf life, regulated production</small></li>
                 </ul>
               </li>
-              <li class="area core">
+              <li class="area">
                 <span>ePP/DS and PP/DS</span>
                 <ul>
                   <li>Optimizer</li>
@@ -114,9 +123,14 @@
                   <li>CIF</li>
                 </ul>
               </li>
-              <li>MES integration</li>
-              <li>S/4HANA migration</li>
-              <li>IBP and Kinaxis to PP/DS handover</li>
+              <li class="area">
+                <span>Integration and migration</span>
+                <ul>
+                  <li>MES integration</li>
+                  <li>S/4HANA migration</li>
+                  <li>IBP and Kinaxis to PP/DS handover</li>
+                </ul>
+              </li>
             </ul>
           </li>
         </ul>
@@ -125,13 +139,61 @@
 
     <section class="section" aria-labelledby="refs-title">
       <div class="wrap">
-        <h2 id="refs-title">Example References</h2>
+        <h2 id="refs-title">Example references</h2>
         <ul class="refs">
-          <li>Greenfield S/4HANA implementation with SAP PP and PP/DS for leading automotive and aerospace manufacturer</li>
+          <li>
+            <p class="ref-industry">Aerospace and automotive</p>
+            <div>
+              <h3>Greenfield S/4HANA with SAP PP and ePP/DS</h3>
+              <p>Led the planning and production stream from blueprint to integration tests and key user training. Finite, optimizer-based scheduling with setup matrices, joint planning of production and laboratory capacity under aerospace regulations, and a clear split of responsibilities between ERP, APS and MES.</p>
+              <p class="ref-result"><strong>Result:</strong> Regulated production planned end to end in S/4HANA. The mandate was extended to the automotive business.</p>
+            </div>
+          </li>
+          <li>
+            <p class="ref-industry">Food and beverages</p>
+            <div>
+              <h3>IBP and ePP/DS as one planning chain</h3>
+              <p>IBP and ePP/DS had been implemented separately. We corrected the demand handover to the producing plants, moved from classic MRP to requirements planning in PP/DS, and introduced a setup matrix for sequence-optimized scheduling.</p>
+              <p class="ref-result"><strong>Result:</strong> One consistent planning chain, with planners working from alerts and Fiori apps instead of manual reconciliation.</p>
+            </div>
+          </li>
+          <li>
+            <p class="ref-industry">Pharmaceuticals</p>
+            <div>
+              <h3>SAP IBP Response and Supply, order-based</h3>
+              <p>Migration from SAP APO with blueprint and end-to-end configuration: heuristic supply planning, safety and target stock logic, sales order consumption, deployment, and real-time integration with several ECC and S/4HANA systems.</p>
+              <p class="ref-result"><strong>Result:</strong> Worldwide roll-out, including support and hypercare.</p>
+            </div>
+          </li>
+          <li>
+            <p class="ref-industry">Specialty chemicals</p>
+            <div>
+              <h3>Kinaxis handover into embedded PP/DS</h3>
+              <p>Designed and implemented the handover of planned orders from Kinaxis into embedded PP/DS, and introduced the new ePP/DS functions to planners and key users in best-practice workshops.</p>
+              <p class="ref-result"><strong>Result:</strong> Planners work from one finite schedule in S/4HANA, based on the Kinaxis supply plan.</p>
+            </div>
+          </li>
+          <li>
+            <p class="ref-industry">Machinery</p>
+            <div>
+              <h3>SAP IBP and ePP/DS for a high-variance product range</h3>
+              <p>S&amp;OP design with demand and supply reviews, full ePP/DS configuration with variant configuration, and a custom heuristic that schedules assembly against physical space as well as time.</p>
+              <p class="ref-result"><strong>Result:</strong> S&amp;OP connected through to detailed scheduling, with assembly planned finitely against capacity and the variant mix.</p>
+            </div>
+          </li>
+          <li>
+            <p class="ref-industry">Food</p>
+            <div>
+              <h3>SAP IBP S&amp;OP with APO migration</h3>
+              <p>Demand planning with promotions, driver-based risks and opportunities and machine-learning forecasts, time-series supply optimization with cost integration and scenarios, and new product introduction.</p>
+            </div>
+          </li>
+        </ul>
+        <h3 class="refs-more-title">Further projects</h3>
+        <ul class="refs-more">
           <li>IBP implementation with Supply and Response in the consumer goods industry</li>
           <li>Go-live readiness check for SAP IBP and PP/DS</li>
-          <li>S/4HANA greenfield PP &amp; PP/DS implementation in construction and engineering industry</li>
-          <li>IBP implementation in the life sciences industry</li>
+          <li>S/4HANA greenfield PP &amp; PP/DS implementation in the construction and engineering industry</li>
         </ul>
       </div>
     </section>
@@ -148,8 +210,8 @@
     <div class="wrap">
       <span>Copyright © Progresso Consulting Germany GmbH</span>
       <ul>
-        <li><a href="/impressum">Impressum</a></li>
-        <li><a href="/datenschutz">Datenschutz</a></li>
+        <li><a href="/legal-notice">Legal notice</a></li>
+        <li><a href="/privacy">Privacy</a></li>
       </ul>
     </div>
   </footer>

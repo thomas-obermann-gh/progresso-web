@@ -18,7 +18,8 @@
   --accent: #1d6a84;
   --signal: #d9961f;
   --bar: #9fb6c2;
-  --bar-soft: #dbe5ea;
+  --skill: #1d6a84;
+  --skill-ink: #ffffff;
 
   --measure: 66ch;
   --wide: 68rem;
@@ -37,7 +38,8 @@
     --accent: #5db2cf;
     --signal: #e8a93a;
     --bar: #3d5666;
-    --bar-soft: #263744;
+    --skill: #2a6a82;
+    --skill-ink: #eef6fa;
     color-scheme: dark;
   }
 }
@@ -87,9 +89,19 @@ a:hover { text-decoration-thickness: 2px; }
 .brand .mark-bg { fill: var(--ink); }
 .brand .mark-bar { fill: var(--bg); }
 .brand .mark-signal { fill: var(--signal); }
+.site-tools { display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; }
 .site-nav ul { display: flex; gap: 1.4rem; list-style: none; margin: 0; padding: 0; }
 .site-nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--ink); }
+
+/* Sprachumschalter: normale Links, damit die Seite ohne JavaScript auskommt */
+.lang { display: flex; list-style: none; margin: 0; padding: 0; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+.lang a {
+  display: block; padding: 0.2rem 0.6rem; color: var(--muted);
+  font-size: 0.85rem; font-weight: 600; text-decoration: none;
+}
+.lang a:hover { color: var(--ink); background: var(--surface); }
+.lang a[aria-current] { background: var(--ink); color: var(--bg); }
 
 /* Startseite: Kopfbereich */
 .hero { padding: clamp(2.5rem, 6vw, 4.5rem) 0 clamp(3rem, 7vw, 4.5rem); }
@@ -103,7 +115,7 @@ a:hover { text-decoration-thickness: 2px; }
 }
 
 /* Opener: die Berater als Ressourcen auf der Planungstafel.
-   Kernschwerpunkte sind Signalbalken, die Module darunter Vorgänge auf der Tafel. */
+   Alle Skills haben bewusst dieselbe Farbe, damit keine Abstufung nach Können entsteht. */
 .crew {
   list-style: none; margin: clamp(2rem, 5vw, 3rem) 0 0; padding: 1.75rem 0 0;
   border-top: 1px solid var(--line);
@@ -124,18 +136,15 @@ a:hover { text-decoration-thickness: 2px; }
   display: flex; flex-wrap: wrap; gap: 0.3rem;
 }
 .focus .area { flex: 1 1 100%; }
-.focus > li:not(.area) { flex: 1 1 auto; background: var(--bar); color: #15202b; }
 .focus ul { list-style: none; margin: 0.3rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.3rem; }
-.focus ul li { flex: 1 1 auto; background: var(--bar-soft); color: var(--ink); }
+.focus ul li { flex: 1 1 auto; background: var(--skill); color: var(--skill-ink); }
 .focus ul.notes li { flex: 1 1 40%; }
-.focus > li:not(.area), .focus ul li, .area > span {
+.focus ul li, .area > span {
   padding: 0.24rem 0.6rem; font-size: 0.92rem; font-weight: 500; line-height: 1.35;
 }
-.area > span { display: block; background: var(--bar); color: #15202b; font-weight: 600; }
-.area.core > span { background: var(--signal); }
-.focus ul li.key { background: var(--signal); color: #15202b; font-weight: 600; }
+.area > span { display: block; background: var(--ink); color: var(--bg); font-weight: 600; }
 .focus small {
-  display: block; margin-top: 0.15rem; color: var(--muted);
+  display: block; margin-top: 0.15rem; opacity: 0.9;
   font-size: 0.82rem; font-weight: 400; line-height: 1.35;
 }
 
@@ -146,7 +155,6 @@ a:hover { text-decoration-thickness: 2px; }
 @keyframes schedule { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0); } }
 
 @media (prefers-color-scheme: dark) {
-  .focus > li:not(.area), .area:not(.core) > span { color: var(--ink); }
   .crew-head img { filter: brightness(0.92); }
 }
 
@@ -154,8 +162,18 @@ a:hover { text-decoration-thickness: 2px; }
 h2 { font-size: 1.3rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.3; }
 .section { padding: 0 0 clamp(3rem, 8vw, 5.5rem); }
 
-.refs { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); max-width: 52rem; }
-.refs li { padding: 1rem 0; border-bottom: 1px solid var(--line); }
+.section h2 { margin: 0 0 1rem; }
+.refs { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.refs > li {
+  display: grid; grid-template-columns: var(--head) 1fr; gap: 0.2rem 1.75rem;
+  padding: 1.25rem 0; border-bottom: 1px solid var(--line);
+}
+.refs h3 { margin: 0; font-size: 1.08rem; font-weight: 600; line-height: 1.35; }
+.refs p { margin: 0.3rem 0 0; max-width: 68ch; }
+.refs .ref-industry { margin: 0; color: var(--muted); font-weight: 500; }
+.ref-result strong { font-weight: 600; }
+.refs-more-title { margin: 2rem 0 0.4rem; font-size: 1.08rem; font-weight: 600; }
+.refs-more { margin: 0; padding-left: 1.2rem; color: var(--muted); }
 
 .contact { background: var(--surface); padding: clamp(2.5rem, 6vw, 4rem) 0; }
 .contact h2 { margin: 0 0 0.6rem; }
@@ -188,6 +206,7 @@ h2 { font-size: 1.3rem; font-weight: 600; letter-spacing: -0.01em; line-height: 
   .crew-head { grid-template-columns: 5.5rem 1fr; gap: 0.75rem 1rem; align-items: center; }
   .crew-head > div { display: contents; }
   .crew-head p { grid-column: 1 / -1; margin: 0; }
+  .refs > li { grid-template-columns: 1fr; }
   .contact a { font-size: 1rem; }
   .site-nav ul { gap: 1rem; }
 }
@@ -195,5 +214,6 @@ h2 { font-size: 1.3rem; font-weight: 600; letter-spacing: -0.01em; line-height: 
 @media print {
   .skip, .site-nav { display: none; }
   .focus li, .area > span { background: none; color: #000; border: 1px solid #000; }
+  .lang { display: none; }
   body { background: #fff; color: #000; }
 }

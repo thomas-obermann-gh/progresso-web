@@ -1,2 +1,4 @@
-# Alte IONOS-Adresse der Datenschutzerklärung auf die neue Seite umleiten
-/privacy18741a6b  /datenschutz  301
+# Alte Adressen auf die neuen Seiten umleiten
+/impressum  /de/impressum  301
+/datenschutz  /de/datenschutz  301
+/privacy18741a6b  /de/datenschutz  301
