@@ -179,7 +179,7 @@ h2 { font-size: 1.3rem; font-weight: 600; letter-spacing: -0.01em; line-height: 
 .site-footer ul { display: flex; gap: 1.4rem; list-style: none; margin: 0; padding: 0; }
 .site-footer a { color: var(--muted); }
 
-@media (max-width: 56rem) {
+@media (max-width: 68rem) {
   .focus { display: flex; flex-wrap: wrap; }
   .focus > li:not(.area) { flex: 1 1 auto; }
   .focus .area { flex: 1 1 100%; }
