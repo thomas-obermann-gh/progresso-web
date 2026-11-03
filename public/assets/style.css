@@ -18,8 +18,10 @@
   --accent: #1d6a84;
   --signal: #d9961f;
   --bar: #9fb6c2;
-  --skill: #1d6a84;
-  --skill-ink: #ffffff;
+  --group: #2a7a96;
+  --group-ink: #ffffff;
+  --skill: #a9d3e0;
+  --skill-ink: #15202b;
 
   --measure: 66ch;
   --wide: 68rem;
@@ -38,8 +40,10 @@
     --accent: #5db2cf;
     --signal: #e8a93a;
     --bar: #3d5666;
-    --skill: #2a6a82;
-    --skill-ink: #eef6fa;
+    --group: #4a9dba;
+    --group-ink: #0f171e;
+    --skill: #2f5163;
+    --skill-ink: #e8eef2;
     color-scheme: dark;
   }
 }
@@ -142,7 +146,7 @@ a:hover { text-decoration-thickness: 2px; }
 .focus ul li, .area > span {
   padding: 0.24rem 0.6rem; font-size: 0.92rem; font-weight: 500; line-height: 1.35;
 }
-.area > span { display: block; background: var(--ink); color: var(--bg); font-weight: 600; }
+.area > span { display: block; background: var(--group); color: var(--group-ink); font-weight: 600; }
 .focus small {
   display: block; margin-top: 0.15rem; opacity: 0.9;
   font-size: 0.82rem; font-weight: 400; line-height: 1.35;
