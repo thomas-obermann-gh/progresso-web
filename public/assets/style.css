@@ -94,9 +94,9 @@ a:hover { text-decoration-thickness: 2px; }
 .brand .mark-bar { fill: var(--bg); }
 .brand .mark-signal { fill: var(--signal); }
 .site-tools { display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; }
-.site-nav ul { display: flex; gap: 1.4rem; list-style: none; margin: 0; padding: 0; }
+.site-nav ul { display: flex; flex-wrap: wrap; gap: 0.2rem 1.4rem; list-style: none; margin: 0; padding: 0; }
 .site-nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
-.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--ink); }
+.site-nav a:hover, .site-nav a[aria-current] { color: var(--ink); }
 
 /* Sprachumschalter: normale Links, damit die Seite ohne JavaScript auskommt */
 .lang { display: flex; list-style: none; margin: 0; padding: 0; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
@@ -121,6 +121,7 @@ a:hover { text-decoration-thickness: 2px; }
 /* Opener: die Berater als Ressourcen auf der Planungstafel.
    Alle Skills haben bewusst dieselbe Farbe, damit keine Abstufung nach Können entsteht. */
 .crew {
+  scroll-margin-top: 1rem;
   list-style: none; margin: clamp(2rem, 5vw, 3rem) 0 0; padding: 1.75rem 0 0;
   border-top: 1px solid var(--line);
   display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem clamp(2rem, 4vw, 3.5rem);
@@ -256,7 +257,7 @@ h3.ref-industry { font-size: 1rem; line-height: 1.6; }
   .profile-more > div { grid-template-columns: 1fr; }
   .refs > li { grid-template-columns: 1fr; }
   .contact a { font-size: 1rem; }
-  .site-nav ul { gap: 1rem; }
+  .site-nav ul { gap: 0.2rem 1rem; }
 }
 
 @media print {
