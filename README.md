@@ -11,6 +11,8 @@ Jede Seite gibt es auf Englisch (Standard) und Deutsch. Der Umschalter EN/DE in 
 | `public/index.html` (`/`) | `public/de/index.html` (`/de/`) | Startseite |
 | `public/legal-notice.html` (`/legal-notice`) | `public/de/impressum.html` (`/de/impressum`) | Impressum |
 | `public/privacy.html` (`/privacy`) | `public/de/datenschutz.html` (`/de/datenschutz`) | Datenschutzerklärung |
+| `public/thomas-obermann.html` (`/thomas-obermann`) | `public/de/thomas-obermann.html` (`/de/thomas-obermann`) | Profil Thomas Obermann |
+| `public/pedro-averwald.html` (`/pedro-averwald`) | `public/de/pedro-averwald.html` (`/de/pedro-averwald`) | Profil Pedro Averwald |
 
 | Datei | Zweck |
 |---|---|
@@ -22,6 +24,8 @@ Jede Seite gibt es auf Englisch (Standard) und Deutsch. Der Umschalter EN/DE in 
 | `public/_headers` | Sicherheits-Header |
 | `public/robots.txt`, `public/sitemap.xml` | Für Suchmaschinen |
 | `wrangler.jsonc` | Cloudflare-Einstellungen (Name des Workers, Ordner `public`, 404-Seite, Vorschau für Branches) |
+
+Profilseiten bleiben anonym: keine Kundennamen, keine genauen Zeiträume, keine Länder, keine Geburtsdaten und kein PDF-Download.
 
 Rechtlich maßgeblich ist die deutsche Fassung von Impressum und Datenschutzerklärung. Änderungen immer in beiden Sprachen vornehmen.
 
@@ -42,5 +46,6 @@ Immer in beiden Sprachen:
 
 - Startseite: Satz unter der Hauptüberschrift, Pedros Block in der Liste `crew` und `pedro-averwald.jpg` entfernen. Die zweispaltige Liste `.crew` auf eine Spalte umstellen.
 - Referenzen aus seinen Projekten entfernen: Pharma (Response and Supply) und Lebensmittel (S&OP mit APO-Migration).
+- Profilseite: `pedro-averwald.html` in beiden Sprachen löschen, aus `sitemap.xml` entfernen und in `_redirects` auf die Startseite umleiten.
 - Impressum: Geschäftsführer anpassen.
 - Bei einer Verlegung der GmbH: Anschrift in Impressum und Datenschutzerklärung anpassen.
